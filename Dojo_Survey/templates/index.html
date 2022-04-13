@@ -1,52 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        form {
-        background-color: lightblue;
-        border: 2px solid darkblue;
-        width: 400px;
-        height: 300px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Dojo Survey</title>
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    width: auto;
+    border: 10px solid darkslategray;
+    padding: 100px;
+    margin: 40px;
+    /* display: center; */
+    background-color: lightslategray;
+}
+
+h1 {
+    text-align: center;
+    color: aqua;
+}
+
+div.box {
+    display: center;
+}
+
+.box {
+        width: auto;
+        border: 4px solid black;
+        padding: 50px;
+        margin: 20px;
+        background-color: blanchedalmond;
+        font-size: large;
+        font-weight: 500;
+    }
+
+</style>
 </head>
+
 <body>
+<div class="container">
     <h1>Dojo Survey</h1>
-    <div>
-    <form>
-        <label for="name">Full Name:</label>
-        <br>
-        <input type="text" id="name" name="name">
-        <br>
-        <label for="location">Where is your Dojo?</label>
-        <br>
-        <select id="location" name="location">
-            <option value="Chicago">Chicago</option>
-            <option value="Seattle">Seattle</option>
-            <option value="Online">Online</option>
-            <option value="Burbank">Burbank</option>
-            <option value="Bellevue">Bellevue</option>
-        </select>
-        <br>
-        <label for="language">Favorite Language?</label>
-        <br>
-        <select id="language" name="language">
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="Python">Python</option>
-            <option value="Javascript">Javascript</option>
-            <option value="C#">C#</option>
-        </select>
-        <br>
-        <label for="comments">Comments:</label><br>
-        <input type="text" id="comments" name="comments">
-        <br>
-        <input type="submit">
-    </form>
+    <div class="box">
+        <form align="center" action="results" method="POST">
+            <label for="name">Full Name:</label>
+            <br>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="location">Where is your Dojo?</label>
+            <br>
+            <select id="location" name="location">
+                <option value="Chicago">Chicago</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Online">Online</option>
+                <option value="Burbank">Burbank</option>
+                <option value="Bellevue">Bellevue</option>
+            </select>
+            <br>
+            <label for="language">Favorite Language?</label>
+            <br>
+            <select id="language" name="language">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Python">Python</option>
+                <option value="Javascript">Javascript</option>
+                <option value="C#">C#</option>
+            </select>
+            <br>
+            <label for="comments">Comments:</label><br>
+            <input type="text" id="comment" name="comment">
+            <br>
+            <button Type="submit" class="btn-info btn-outline-dark shadow mt-2 p-1">Send Survey</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>
